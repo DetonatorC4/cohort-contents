@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <h1>Todo Application</h1>
+    <input type="text" />
+    <button onclick="addTodo()">Add todo!</button>
+
+    <script>
+      function addTodo() {
+        const input = document.querySelector("input").value;
+
+        // inner elements
+        const spanElement = document.createElement("span");
+        const buttonElemet = document.createElement("button");
+        spanElement.innerHTML = input;
+        buttonElemet.innerHTML = "Delete";
+
+        // Wrapper division
+        const divElement = document.createElement("div");
+        divElement.appendChild(spanElement);
+        divElement.appendChild(buttonElemet);
+
+        document.querySelector("body").appendChild(divElement);
+      }
+    </script>
+  </body>
+</html>
